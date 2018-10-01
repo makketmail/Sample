@@ -21,5 +21,13 @@ type Device struct {
 		} `json:"intf" bson:"intf"`
 	} `json:"net" bson:"net"`
 	TicketID string `json:"ticketID" bson:"ticketID,omitempty"`
+	Net           struct {
+		Intf []struct {
+			Name string `json:"name,omitempty"`
+			Mask string `json:"mask,omitempty"`
+			Ipv4 string `json:"ipv4,omitempty"`
+			Addr string `json:"addr,omitempty"`
+		} `json:"intf" bson:"intf"`
+	} `json:"net" bson:"net"
 	//TicketCreated string `json:"ticketCreated" bson:"ticketCreated"`
 }
